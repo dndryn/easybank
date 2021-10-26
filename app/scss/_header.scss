@@ -1,25 +1,17 @@
 .header {
-
-    // Hamburger Open Styles
     &.open {
-
         .header__toggle {
-
             > span:first-child {
                 transform: rotate(45deg);
             }
-
             > span:nth-child(2) {
                 opacity: 0;
             }
-
             > span:last-child {
             transform: rotate(-45deg);
             }
         }
-
     }
-
 
     nav {
         position: relative;
@@ -29,12 +21,10 @@
     }
 
     &__logo {
-
         img {
             width: 8.8125rem;
             height: 1.375rem;
         }
-
     }
 
     &__toggle { // Mobile menu toggle
@@ -45,7 +35,6 @@
             background-color: $darkBlue;
             transition: all 300ms ease-in-out;
             transform-origin: 3px 1px;
-
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
@@ -62,7 +51,6 @@
         margin-top: 1.5rem;
         padding: 1.625rem;
         border-radius: 5px;
-
         a {
             display: block;
             padding: 0.625rem;
@@ -71,20 +59,15 @@
         }
     }
 
-
-
     &__links {
-
         a {
             position: relative;
             font-size: $font-sm;
             color: $grayishBlue;
             transition: color 300ms ease-in-out;
-
             &:not(:last-child) {
                 margin-right: 32px;
             }
-
             &::before {
                 content: "";
                 display: block;
@@ -97,7 +80,6 @@
                 opacity: 0;
                 transition: opacity 300ms ease-in-out;
             }
-
             &:hover {
                 color: $darkBlue;
 
@@ -106,10 +88,7 @@
                 }
             }
         }
-
     }
-
-
 
     .overlay {
         position: fixed;
@@ -117,13 +96,10 @@
         right: 0px;
         bottom: 0px;
         left: 0px;
-
         &.fade-in {
             display: block;
             background-image: linear-gradient($darkBlue, transparent);
-
         }
-
         &.fade-out {
             display: block;
             background-image: linear-gradient($darkBlue, transparent);
