@@ -1,7 +1,5 @@
 .hero {
-
     background-color: $veryLightGray;
-
     .container {
         @include breakpoint-up(large) {
             display: flex;
@@ -9,39 +7,31 @@
         }
     }
 
-    
-
     &__image {
         position: relative;
-        background-image: url('./images/bg-intro-mobile.svg');
+        background-image: url($hero-img);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 17.5rem;
-
         @include breakpoint-up(medium) {
             min-height: 25rem;
             background-position: center 60%;
         }
-
 
         @include breakpoint-up(large) {
             flex: 3;
             order: 2;
             height: 41rem;
             background-image: none;
-            //background-image: url('/images/bg-intro-desktop.svg');
-            //background-position: left center;
         }
 
-        &::before {
-
-            
+        &::before {    
             @include breakpoint-up(large) {
                 content: "";
                 position: absolute;
                 height: 100%;
-                background-image: url('./images/bg-intro-desktop.svg');
+                background-image: url($hero-img-background);
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 width: 150%;
@@ -55,11 +45,10 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: url('./images/image-mockups.png');
+            background-image: url($hero-img);
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
-            
             @include breakpoint-up(medium) {
                 background-size: 52%;
             }
