@@ -1,7 +1,6 @@
 .footer{
     background-color: $darkBlue;
     color: $white;
-    padding: 3rem 10.25rem;
     text-align: center;
     @include breakpoint-up(large) {
         display: grid;
@@ -11,6 +10,7 @@
         grid-template-areas: 
         "logo links1 links2 cta"
         "social links1 links2 copyright";
+        padding: 3rem 10.25rem;
     }
     a {
         color: $white;
@@ -87,6 +87,10 @@
         a.button {
             @include breakpoint-down(medium) {
             margin-bottom: 1.875rem;
+            transition: opacity 300ms ease-in-out;
+            &:hover {
+                opacity: 1.75;
+            }
         }
     }
         @include breakpoint-up(large) {
