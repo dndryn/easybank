@@ -103,18 +103,22 @@ a, a:visited, a:hover {
 }
 
 // Flexbox
-.flex {
+.fx {
     display: flex;
-
-    &-jc-sb {
-        justify-content: space-between;
+    &-rw-sb {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     &-jc-c {
+        display: flex;
         justify-content: center;
     }
 
     &-ai-c {
+        display: flex;
         align-items: center;
     }
 }
