@@ -2,19 +2,22 @@
     background-color: $darkBlue;
     color: $white;
     text-align: center;
+    padding-top: 2rem;
+    
     @include breakpoint-up(large) {
         display: grid;
         justify-items: start;
         grid-template-columns: 2fr 1fr 1fr 3fr;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 1fr;
         grid-template-areas: 
         "logo links1 links2 cta"
         "social links1 links2 copyright";
-        padding: 3rem 10.25rem;
+        padding: 2rem 10.25rem;
     }
     a {
         color: $white;
     }
+
     &__logo {
         display: inline-block;
         @include breakpoint-up(large) {
@@ -28,6 +31,12 @@
         a {
             display: inline-block;
             height: 1.25rem;
+            &:hover svg path {
+                fill: $limeGreen;
+            }
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
         }
         a:not(:last-child) {
             display:inline-block;
@@ -109,4 +118,5 @@
             font-size: rem(25); // 15px
         }
     }
+
 }
