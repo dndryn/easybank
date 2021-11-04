@@ -17,3 +17,7 @@
 *.code
 
 *.md
+
+
+.parcel-cache
+node_modules
